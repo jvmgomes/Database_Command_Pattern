@@ -1,3 +1,7 @@
+using src.data;
+using src.Server;
+using System;
+
 namespace src.Command;
 public class AllCommand : Command {
     public AllCommand(Dictionary<int, Pessoa> db) {
