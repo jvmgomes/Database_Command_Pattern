@@ -13,7 +13,7 @@ public class Server
         initCommands();
     }
 
-    private void InitCommands()
+    private void initCommands()
     {
         cmds.Add("new", new NewCommand(db));
         cmds.Add("del", new DeleteCommand(db));

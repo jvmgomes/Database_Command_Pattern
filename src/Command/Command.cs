@@ -1,4 +1,4 @@
 namespace src.Command;
-public interface Command {
+public interface ICommand {
     public Object execute(Object arg);
 }

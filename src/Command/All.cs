@@ -4,6 +4,7 @@ using System;
 
 namespace src.Command;
 public class AllCommand : Command {
+    private Dictionary<int, Pessoa> db;
     public AllCommand(Dictionary<int, Pessoa> db) {
         this.db = db;
     }

@@ -4,16 +4,24 @@ using System;
 
 namespace src.Command;
 
-public class New : Command {
-
-    public New(Dictionary<int, Pessoa> db)
+public class NewCommand : ICommand {
+    private Dictionary<int, Pessoa> db;
+    public NewCommand(Dictionary<int, Pessoa> db)
     {
         this.db = db;
     }
     public Object execute(Object arg) {
         Data d = (Data)arg;
-        int id = d.getArg(0);
-        String nome = d.getArg(1);
-        db.Add(new Pessoa(id, nome));
+        int id = d.GetArg<int>(0);
+        string nome = d.GetArg<string>(1);
+
+        Pessoa p = new Pessoa.Builder()
+            .ComId(id)
+            .ComNome(nome)
+            .Build();
+
+        db.Add(id, p);
+        Console.WriteLine($"Pessoa {nome} (ID {id}) adicionada.");
+        return null;
     }
 }
