@@ -10,6 +10,6 @@ public class New : Command {
         Data d = (Data)arg;
         int id = d.getArg(0);
         String nome = d.getArg(1);
-        db.put(new Pessoa(id, nome));
+        db.Add(new Pessoa(id, nome));
     }
 }
