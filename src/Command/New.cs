@@ -1,8 +1,10 @@
+using src.data;
+
 namespace src.Command;
 
 public class New : Command {
 
-    public New()
+    public New(Dictionary<int, Pessoa> db)
     {
         this.db = db;
     }
