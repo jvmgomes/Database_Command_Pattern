@@ -29,10 +29,10 @@ public class Pessoa
         {
             if (string.IsNullOrWhiteSpace(_nome))
                 throw new InvalidOperationException("Nome é obrigatório para criar uma Pessoa.");
-            if (string.IsNullOrWhiteSpace(_identidade))
+            if (_identidade == null)
                 throw new InvalidOperationException("Identidade é obrigatória para criar uma Pessoa.");
 
-            return new Pessoa(_nome, _identidade);
+            return new Pessoa(_nome, _identidade.Value);
         }
     }
 }
