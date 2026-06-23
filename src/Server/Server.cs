@@ -1,4 +1,7 @@
-namespace src.Command;
+using src.Command;
+using System;
+
+namespace src.Server;
 
 public class Server
 {
@@ -24,15 +27,10 @@ public class Server
         if (cmds.TryGetValue(cmd, out ICommand c))
         {
             c.Execute(data);
-
         }
-
         else
         {
             Console.WriteLine($"Comando '{cmd}' não reconhecido pelo Server");
         }
     }
-    
-
-
 }

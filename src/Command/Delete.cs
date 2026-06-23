@@ -1,3 +1,7 @@
+using src.data;
+using src.Server;
+using System;
+
 namespace src.Command;
 public class DeleteCommand : Command {
     public DeleteCommand(Dictionary<int, Pessoa> db) {

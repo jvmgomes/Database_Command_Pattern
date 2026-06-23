@@ -1,3 +1,7 @@
+using src.data;
+using src.Server;
+using System;
+
 namespace src.Command;
 public class GetCommand : Command {
     public GetCommand(Dictionary<int, Pessoa> db) {

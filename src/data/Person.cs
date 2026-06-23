@@ -1,4 +1,4 @@
-namespace data;
+namespace src.data;
 public class Pessoa
 {
     public string Nome { get; }
