@@ -1,11 +1,13 @@
 using src.Command;
+using src.data;
 using System;
+using System.Collections.Generic;
 
 namespace src.Server;
 
 public class Server
 {
-    private Dictionary<int, string> db = new Dictionary<int, string>();
+    private Dictionary<int, Pessoa> db = new Dictionary<int, Pessoa>();
     private Dictionary<string, ICommand> cmds = new Dictionary<string, ICommand>();
 
     public Server()
@@ -26,7 +28,7 @@ public class Server
     {
         if (cmds.TryGetValue(cmd, out ICommand c))
         {
-            c.Execute(data);
+            c.execute(data);
         }
         else
         {

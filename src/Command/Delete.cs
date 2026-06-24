@@ -3,7 +3,7 @@ using src.Server;
 using System;
 
 namespace src.Command;
-public class DeleteCommand : Command {
+public class DeleteCommand : ICommand {
     private Dictionary<int, Pessoa> db;
     public DeleteCommand(Dictionary<int, Pessoa> db) {
         this.db = db;
