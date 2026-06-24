@@ -3,7 +3,7 @@ using src.Server;
 using System;
 
 namespace src.Command;
-public class GetCommand : Command {
+public class GetCommand : ICommand {
     private Dictionary<int, Pessoa> db;    
     public GetCommand(Dictionary<int, Pessoa> db) {
         this.db = db;

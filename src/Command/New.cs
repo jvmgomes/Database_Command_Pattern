@@ -16,7 +16,7 @@ public class NewCommand : ICommand {
         string nome = d.GetArg<string>(1);
 
         Pessoa p = new Pessoa.Builder()
-            .ComId(id)
+            .ComIdentidade(id)
             .ComNome(nome)
             .Build();
 
